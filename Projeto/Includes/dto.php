@@ -2,7 +2,7 @@
 
 //Encapsulando os dados do usuário
 
-class Usuario
+public class Usuario
 {
 	private $id;
 	private $nome;
@@ -14,7 +14,7 @@ class Usuario
 	private $dataNascimento;
 	private $dataCadastro;
 
-	function __construct(argument)
+	function __construct()
 	{
 		//Deixa padrão a data atual
 		SetDataCadastro(date());
@@ -93,5 +93,118 @@ class Usuario
 	}
 }
 
+public class Telefone
+{
+	private $idT;
+	private $tipo;
+	private $numero;
+	private $idUsuario;
+
+	public function GetId(){
+		return $this->id;
+	}
+
+	public function GetTipo(){
+		return $this->tipo;
+	}
+
+	public function GetNumero(){
+		return $this->numero;
+	}
+
+	public function GetIdUsuario(){
+		return $this->idUsuario;
+	}
+
+	public function SetId($valor){
+	$this->id = $valor;
+	}
+
+	public function SetTipo($valor){
+	$this->tipo = $valor;
+	}
+
+	public function SetIdNumero($valor){
+	$this->numero = $valor;
+	}
+
+	public function SetIdIdUsuario($valor){
+	$this->idUsuario = $valor;
+	}
+}
+
+public class EmailConfirmacao
+{
+	private $idEmailConfirmacao;
+	private $codigo;
+	private $dataCriacao;
+	private $emailConfirmacao;
+	private $status;
+	private $validade;
+	private $idUsuario;
+
+	function GetIdEmailConfirmacao()
+	{
+		return $this->emailConfirmacao;
+	}
+
+	function GetCodigo(){
+		return $this->codigo;
+	}
+
+	function GetDataCriacao(){
+		return $this->dataCriacao;
+	}
+
+	function GetEmailConfirmacao(){
+		return $this->emailConfirmacao;
+	}
+
+	function GetStatus(){
+		return $this->status;
+	}
+
+	function GetValidade(){
+		return $this->validade;
+	}
+
+	function GetIdUsuario(){
+		return $this->idUsuario;
+	}
+
+	function SetIdEmailConfirmacao($valor){
+		$this->idEmailConfirmacao = $valor;
+	}
+
+	function SetCodigo($valor){
+		$this->codigo = $valor;
+	}
+
+	function SetDataCriacao($valor){
+		$this->dataCriacao = $valor;
+	}
+
+	function SetEmailConfirmacao($valor){
+		$this->emailConfirmacao = $valor;
+	}
+
+	function SetStatus($valor){
+		$this->status = $valor;
+	}
+
+	function SetValidade($valor){
+		$this->validade = $valor;
+	}
+
+	function SetIdUsuario($valor){
+		$this->idUsuario = $valor;
+	}
+
+
+	function __construct()
+	{
+		SetDataCriacao(date());
+	}
+}
 
 ?>
